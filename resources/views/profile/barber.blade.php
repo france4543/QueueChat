@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header mb-4">{{ __('Profile') }}</div>
+                <div class="card-header mb-4 bg-blue text-white">{{ __('Profile') }}</div>
 
                 @if (Auth::user()->images === null)
                     <div></div>

@@ -19,13 +19,14 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+<body class="bg-secondary">
+    
+    <b><div id="app">
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <b><a class="navbar-brand" href="{{ url('/') }}">
                     QueueChat
-                </a>
+                </a></b>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -41,11 +42,11 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <b><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></b>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <b><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></b>
                                 </li>
                             @endif
                         @else
@@ -81,7 +82,7 @@
                                 </li>
                             @else
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ url("/member/order") }}">{{ __('My Order') }}</a>
+                                    <a class="nav-link" href="{{ url("/member/order") }}">{{ __('My Chat') }}</a>
                                 </li>
 
                                 <li class="nav-item dropdown">
@@ -115,6 +116,6 @@
         <main class="py-4">
             @yield('content')
         </main>
-    </div>
+    </div></b>
 </body>
 </html>

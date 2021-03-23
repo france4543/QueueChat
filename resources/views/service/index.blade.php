@@ -5,8 +5,8 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">
-                    <div class="row">
+                <div class="card-header  bg-blue text-white">
+                    <div class="row ">
                         <div class="col-md-6" align='left'>
                             Service
                         </div>
@@ -17,10 +17,10 @@
                     </div>
                 </div>
 
-                <div class="card-body">
+                <div class="card-body ">
                     <table class='table table-bordered'>
                         <tr align='center'>
-                            <th>Name</th>
+                            <th>Name / Price</th>
                             <th>Action</th>
                         </tr>
 
