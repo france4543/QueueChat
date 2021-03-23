@@ -73,10 +73,6 @@ body {
   color: #212529;
   text-align: left;
   background-color: #f8fafc;
-  background-image: url('https://images.unsplash.com/photo-1501420264597-23296a7e6a46?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTF8fHxlbnwwfHx8&w=1000&q=80');
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size:cover;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -6998,13 +6994,10 @@ a.close.disabled {
 .align-text-top {
   vertical-align: text-top !important;
 }
-.bg-blue{
-  background-color: #265AAD !important;
-}
+
 .bg-primary {
   background-color: #3490dc !important;
 }
-
 
 a.bg-primary:hover,
 a.bg-primary:focus,
@@ -7014,7 +7007,7 @@ button.bg-primary:focus {
 }
 
 .bg-secondary {
-  background-color: #D2D2D2 !important;
+  background-color: #6c757d !important;
 }
 
 a.bg-secondary:hover,
@@ -7025,7 +7018,7 @@ button.bg-secondary:focus {
 }
 
 .bg-success {
-  background-color: #FF8A00 !important;
+  background-color: #38c172 !important;
 }
 
 a.bg-success:hover,
@@ -7082,10 +7075,6 @@ button.bg-light:focus {
 .bg-dark {
   background-color: #343a40 !important;
 }
-.bg-yellow{
-  background-color: #E3B069 !important;
-}
-.
 
 a.bg-dark:hover,
 a.bg-dark:focus,
