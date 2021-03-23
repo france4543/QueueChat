@@ -6,6 +6,8 @@
           <div v-if="item.name === 'Barber'">
             <div align="right" style="color: green">
               <b>[Me]</b> {{ item.message }}
+              <br>
+              {{ (String(item.time)).substring(0, 10) }} {{(String(item.time)).substring(11, 16)}}
             </div>
             <hr />
           </div>
@@ -13,6 +15,8 @@
           <div v-else>
             <div align="left" style="color: red">
               <b>[Member]</b> {{ item.message }}
+              <br>
+              {{ (String(item.time)).substring(0, 10) }} {{(String(item.time)).substring(11, 16)}}
             </div>
             <hr />
           </div>
@@ -41,6 +45,7 @@
 
 <script>
 import firebase from "../firebase";
+import moment from 'moment';
 export default {
   mounted() {
     this.get_chat();
@@ -56,15 +61,21 @@ export default {
       });
     },
     send_chat() {
-      const pathname = window.location.pathname;
-      const appId = pathname.split("/")[3];
-      const db = firebase.database();
-      db.ref("chats").push({
-        rent_id: appId,
-        name: "Barber",
-        message: this.message,
-      });
-      this.message = "";
+      moment.locale('th');
+      const date = new Date();
+      const date_th = moment(date).format();
+      if (this.message !== "") {
+        const pathname = window.location.pathname;
+        const appId = pathname.split("/")[3];
+        const db = firebase.database();
+        db.ref("chats").push({
+          rent_id: appId,
+          name: "Barber",
+          message: this.message,
+          time: date_th
+        });
+        this.message = "";
+      }
     },
   },
   data() {

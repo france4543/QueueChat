@@ -19,6 +19,7 @@ class MemberController extends Controller
     public function get_my_order () {
         $rents = Rent::with('get_rents_member')
             ->where('status', '=', 'wait')
+            ->where('customer_id', '=', Auth::user()->id)
             ->get();
         return view('my_order.index', compact('rents'));
     }
